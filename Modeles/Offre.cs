@@ -8,23 +8,36 @@ namespace AtelierCartes.Modeles
     public class Offre
     {
         #region Attributs
-        [JsonProperty]
-        private string id { get; set; } = "";
+        private string identifiant = "";
+        
+        private string identifiantExemplaire = "";
 
-        [JsonProperty]
-        private string copyId { get; set; } = "";
+        private double prix = 0;
 
-        [JsonProperty]
-        private double price { get; set; } = 0;
+        private string statut = "";
 
-        [JsonProperty]
-        private string status { get; set; } = "";
+        
         #endregion
 
         #region Constructeur
         #endregion
 
         #region Getter et Setter
+        [JsonProperty("id")]
+        public string Identifiant { get => identifiant; set => identifiant = value; }
+        
+
+        [JsonProperty("copyId")]
+        public string IdentifiantExemplaire { get => identifiantExemplaire; set => identifiantExemplaire = value; }
+        
+
+        [JsonProperty("price")]
+        public double Prix { get => prix; set => prix = value; }
+        
+
+        [JsonProperty("status")]
+        public string Statut { get => statut; set => statut = value; }
+
         #endregion
 
         #region Methodes

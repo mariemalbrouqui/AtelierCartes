@@ -9,14 +9,19 @@ namespace AtelierCartes.Modeles
     public class Portefeuille
     {
         #region Attributs
-        [JsonProperty]
-        private ObservableCollection<CartePossedee>? positions { get; set; }
+        
+        private ObservableCollection<CartePossedee>? cartesPossedees;
+
+        
         #endregion
 
         #region Constructeur
         #endregion
 
         #region Getter et Setter
+        [JsonProperty("positions")]
+        public ObservableCollection<CartePossedee>? CartesPossedees { get => cartesPossedees; set => cartesPossedees = value; }
+
         #endregion
 
         #region Methodes
