@@ -8,20 +8,27 @@ namespace AtelierCartes.Modeles
     public class CartePossedee
     {
         #region Attributs
-        [JsonProperty]
-        private string id { get; set; } = "";
+        private string identifiant = "";
+        private Cartes? carte = new Cartes();
+        private double valeurActuelle= 0;
 
-        [JsonProperty]
-        private Cartes? card { get; set; } = new Cartes();
-
-        [JsonProperty]
-        private double currentValue { get; set; } = 0;
+        
         #endregion
 
         #region Constructeur
         #endregion
 
         #region Getter et Setter
+        [JsonProperty("id")]
+        public string Identifiant { get => identifiant; set => identifiant = value; }
+       
+
+        [JsonProperty("card")]
+        public Cartes? Carte { get => carte; set => carte = value; }
+        
+        [JsonProperty("currentValue")]
+        public double ValeurActuelle { get => valeurActuelle; set => valeurActuelle = value; }
+
         #endregion
 
         #region Methodes
