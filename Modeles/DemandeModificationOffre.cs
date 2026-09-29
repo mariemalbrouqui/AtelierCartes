@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Text;
 using Newtonsoft.Json;
 
 namespace AtelierCartes.Modeles
 {
-    public class ReponseOffres
+    public class DemandeModificationOffre
     {
         #region Attributs
-        private ObservableCollection<Offre> offres;
+        private double prix = 0;
 
 
         #endregion
@@ -18,8 +17,9 @@ namespace AtelierCartes.Modeles
         #endregion
 
         #region Getter et Setter
-        [JsonProperty("items")]
-        public ObservableCollection<Offre> Offres { get => offres; set => offres = value; }
+        [JsonProperty("price")]
+        public double Prix { get => prix; set => prix = value; }
+
         #endregion
 
         #region Methodes

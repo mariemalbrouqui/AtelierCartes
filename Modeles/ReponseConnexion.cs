@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Text;
 using Newtonsoft.Json;
 
 namespace AtelierCartes.Modeles
 {
-    public class ReponseOffres
+    public class ReponseConnexion
     {
         #region Attributs
-        private ObservableCollection<Offre> offres;
-
+        private string jetonAcces = "";
 
         #endregion
 
@@ -18,8 +16,9 @@ namespace AtelierCartes.Modeles
         #endregion
 
         #region Getter et Setter
-        [JsonProperty("items")]
-        public ObservableCollection<Offre> Offres { get => offres; set => offres = value; }
+        [JsonProperty("accessToken")]
+        public string JetonAcces { get => jetonAcces; set => jetonAcces = value; }
+
         #endregion
 
         #region Methodes
